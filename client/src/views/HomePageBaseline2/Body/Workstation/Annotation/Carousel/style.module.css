@@ -1,0 +1,57 @@
+
+
+.image {
+  width: 200px;
+  height: 120px;
+  padding: 6px;
+}
+
+.image_pre {
+  width: 150px;
+  height: 90px;
+  padding: 6px;
+}
+
+.image_pre_pre {
+  width: 90px;
+  height: 60px;
+  padding: 6px;
+}
+
+.image_pre_pre_pre {
+  width: 60px;
+  height: 40px;
+  padding: 6px;
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+}
+.right-arrow {
+  font-size: 3rem;
+  color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.left-arrow {
+  font-size: 3rem;
+  color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}

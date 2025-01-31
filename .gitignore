@@ -1,0 +1,13 @@
+.env
+mongobackup
+*.cert
+*.key
+
+experiments/**
+!experiments/**/
+!experiments/**/*.py
+!experiments/**/*.ipynb
+
+cheetsheet.md
+
+.vscode

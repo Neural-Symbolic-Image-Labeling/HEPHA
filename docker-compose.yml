@@ -1,0 +1,71 @@
+version: '3'
+
+services:
+########################
+# Core
+########################
+  core:
+    build: ./NSILAIv2
+    image: garethcxy/nsilcore:v1
+    expose:
+      - ${CORE_PORT}
+    ports:
+      - ${CORE_PORT}:${CORE_PORT}
+    volumes:
+      - ./NSILAIv2:/app/core
+    command: python run.py
+    env_file:
+      - .env
+
+########################
+# Backend
+########################
+  backend:
+    build: ./backend
+    image: garethcxy/nsilbe:latest
+    expose:
+      - ${BE_PORT}
+    ports:
+      - ${BE_PORT}:${BE_PORT}
+    volumes:
+      - ./backend:/app/backend
+    command: npm run dev
+    links:
+      - core
+    env_file:
+      - .env
+
+
+########################
+# Frontend
+########################
+  frontend:
+    build: ./client
+    image: garethcxy/nsilfe:latest
+    expose:
+      - ${FE_PORT}
+    ports:
+      - ${FE_PORT}:${FE_PORT}
+    volumes:
+      - ./client:/app/client
+    command: npm run dev
+    links:
+      - backend
+    env_file:
+      - .env
+
+
+########################
+# MongoDB
+########################
+  mongo:
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongodb_data:/data/db
+    command: --quiet
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: nsildb
+      MONGO_INITDB_ROOT_PASSWORD: nsil
+      MONGO_INITDB_DATABASE: db

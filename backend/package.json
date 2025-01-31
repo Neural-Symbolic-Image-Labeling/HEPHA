@@ -1,0 +1,35 @@
+{
+  "name": "nsilweb",
+  "version": "1.0.0",
+  "description": "A front-end interface for HEPHA project",
+  "main": "./src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js",
+    "docker-build": "docker build -t garethcxy/nsilweb:latest .",
+    "docker-run": "docker container run -p 8888:8888 garethcxy/nsilweb"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GareArc/NSILWeb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GareArc/NSILWeb/issues"
+  },
+  "homepage": "https://github.com/GareArc/NSILWeb#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "connect-mongo": "^4.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "mongoose": "^6.4.0",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
