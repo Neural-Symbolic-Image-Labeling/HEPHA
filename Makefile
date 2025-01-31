@@ -2,7 +2,7 @@ setup: setup-backend setup-client setup-core setup-common
 
 run:	
 	@echo "Starting development environment..."
-	@env $$(cat .env | xargs) ./scripts/devrun.sh
+	@./scripts/devrun.sh
 
 stop:
 	@echo "Stopping development environment..."

@@ -10,9 +10,9 @@ fi
 
 cd $workdir
 # Define your commands
-CMD1="cd backend; npm run dev"
-CMD2="cd client; npm run preview"
-CMD3="cd core; python run.py"
+CMD1="cd backend; source ../.env; npm run start"
+CMD2="cd client; source ../.env; npm run build; npm run dev"
+CMD3="cd core; source ../.env; python run.py"
 
 # Start a new tmux session
 tmux new-session -d -s nsil_session
