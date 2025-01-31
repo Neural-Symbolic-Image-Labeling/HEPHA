@@ -1,19 +1,14 @@
-version: '3'
-
 services:
 ########################
 # Core
 ########################
   core:
     build: ./core
-    image: garethcxy/nsilcore:v1
+    image: garethcxy/nsilcore:latest
     expose:
       - ${CORE_PORT}
     ports:
       - ${CORE_PORT}:${CORE_PORT}
-    volumes:
-      - ./NSILAIv2:/app/core
-    command: python run.py
     env_file:
       - .env
 
@@ -27,9 +22,6 @@ services:
       - ${BE_PORT}
     ports:
       - ${BE_PORT}:${BE_PORT}
-    volumes:
-      - ./backend:/app/backend
-    command: npm run dev
     links:
       - core
     env_file:
@@ -46,9 +38,6 @@ services:
       - ${FE_PORT}
     ports:
       - ${FE_PORT}:${FE_PORT}
-    volumes:
-      - ./client:/app/client
-    command: npm run dev
     links:
       - backend
     env_file:
