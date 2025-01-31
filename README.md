@@ -4,6 +4,11 @@
 
 ## Setup Instructions
 
+Pre-requisites:
+
+- Python 3.9
+- NodeJS 19
+
 ### Local Setup
 
 1. **Clone the repository**

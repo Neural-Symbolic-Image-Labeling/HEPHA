@@ -15,6 +15,8 @@ setup-backend:
 setup-client:
 	@echo "Installing client dependencies..."	
 	cd client && npm install || (echo "Backend setup failed"; exit 1)
+	@echo "Building client..."
+	cd client && npm run build || (echo "Backend setup failed"; exit 1)
 
 setup-core:
 	@echo "Installing core dependencies..."
