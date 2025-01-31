@@ -5,7 +5,7 @@ services:
 # Core
 ########################
   core:
-    build: ./NSILAIv2
+    build: ./core
     image: garethcxy/nsilcore:v1
     expose:
       - ${CORE_PORT}
