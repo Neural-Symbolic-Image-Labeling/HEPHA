@@ -6,7 +6,7 @@ run:
 
 stop:
 	@echo "Stopping development environment..."
-	./scripts/devstop.sh
+	@./scripts/devstop.sh
 
 setup-backend:
 	@echo "Installing backend dependencies..."

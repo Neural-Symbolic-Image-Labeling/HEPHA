@@ -2,12 +2,23 @@
 
 ![HEPHA](./assets/teaser.png)
 
-## Setup Instructions
+## 📌 Overview
+
+HEPHA is a mixed-initiative tool that supports image labeling by eliciting labeling knowledge from domain experts.
+
+This project is built with:
+
+- Frontend: ReactJS, Vite
+- Backend: ExpressJS, Flask
+
+## 🚀 Setup Instructions
 
 Pre-requisites:
 
+- MongoDB
 - Python 3.9
 - NodeJS 19
+- Tmux (for local setup)
 
 ### Local Setup
 
@@ -75,3 +86,11 @@ Pre-requisites:
     ```bash
     docker compose down
     ```
+
+## ⚖️ License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) for details.
+
+## 📬 Contact
+
+Please email <szhou20@uci.edu> for any questions. Thanks!
