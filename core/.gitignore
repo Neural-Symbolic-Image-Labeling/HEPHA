@@ -135,4 +135,3 @@ MNIST
 myLog.profile
 
 *.json
-*.pt
