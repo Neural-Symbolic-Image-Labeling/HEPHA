@@ -15,6 +15,7 @@ This project is built with:
 
 Pre-requisites:
 
+- Git(with LFS installed)
 - MongoDB
 - Python 3.9
 - NodeJS 19
@@ -27,6 +28,7 @@ Pre-requisites:
     ```bash
     git clone https://github.com/Neural-Symbolic-Image-Labeling/HEPHA.git
     cd HEPHA
+    git lfs pull
     ```
 
 2. **Install dependencies**  
@@ -65,6 +67,7 @@ Pre-requisites:
     ```bash
     git clone https://github.com/Neural-Symbolic-Image-Labeling/HEPHA.git
     cd HEPHA
+    git lfs pull
     ```
 
 2. **Configure environment**  
